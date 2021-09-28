@@ -4,52 +4,139 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
     <RelativeLayout
-        android:id="@+id/_header"
+        android:id="@+id/login_header"
 
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:background="@color/turquesa">
+        android:background="@color/main"
+        android:paddingTop="16dp"
+        android:paddingEnd="32dp"
+        android:paddingStart="32dp"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="@string/app_titulo"
+            android:textAppearance="@style/titulo"
+            android:textDirection="locale"
+            android:id="@+id/login_header_titulo"
+            />
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/login_header_titulo"
+            android:layout_alignBottom="@+id/login_header_titulo"
+            android:src="@drawable/bmi" />
 
     </RelativeLayout>
 
     <ImageView
-        android:id="@+id/wavetop"
+        android:id="@+id/login_wavetop"
 
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:layout_below="@+id/_header"
-        android:src="@drawable/ic_wave"
+        android:layout_below="@+id/login_header"
+        android:src="@drawable/ic_wave_down"
         android:scaleType="fitXY"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
     />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_below="@+id/wavetop"
-        android:layout_above="@+id/wavebottom"
+        android:layout_below="@+id/login_wavetop"
+        android:layout_above="@+id/login_wavebottom"
     >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingEnd="32dp"
+            android:paddingStart="32dp"
+            >
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_loginTitulo"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_loginSubTitulo"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:endIconMode="clear_text"
+                >
+
+                <EditText
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/login_email"
+                    android:drawableStart="@drawable/email_24"
+                    android:drawablePadding="8dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="password_toggle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/login_senha"
+                    android:inputType="numberPassword"
+                    android:drawableStart="@drawable/lock_24"
+                    android:drawablePadding="8dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_entrar"
+                />
+        </LinearLayout>
+
+
+
+    </ScrollView>
 
     <ImageView
-        android:id="@+id/wavebottom"
+        android:id="@+id/login_wavebottom"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/ic_wave"
+        android:src="@drawable/ic_wave_up"
         android:scaleType="fitXY"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:rotationX="180"
         />
 
 </RelativeLayout>
