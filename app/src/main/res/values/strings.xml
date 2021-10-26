@@ -11,4 +11,12 @@
     <string name="login_nao_tem_conta">Não tem conta?</string>
     <string name="login_criar_uma_conta_agora">Criar uma conta agora</string>
     <string name="login_origem">Feito na China</string>
+    <string name="ncd">NCD</string>
+    <string name="imc">IMC</string>
+    <string name="idade">Idade</string>
+    <string name="peso">Peso</string>
+    <string name="pesar_agora">Pesar Agora</string>
+    <string name="acompanhe_peso">Acompanhe o seu peso</string>
+    <string name="ver_historico">Ver Histórico</string>
+    <string name="rever_conquistas">Reveja suas conquistas</string>
 </resources>
