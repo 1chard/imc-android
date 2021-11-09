@@ -34,139 +34,165 @@
 
             />
     </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
-            android:padding="8dp"
             android:orientation="vertical"
-            >
+            android:padding="8dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
 
             <TextView
+                style="@style/TextAppearance.MaterialComponents.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/lock_24"
-                android:text="\tDados para autentificacao"
-                style="@style/TextAppearance.MaterialComponents.Body1"
-                android:textColor="@color/primary_light"
-                android:gravity="center_vertical"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp"
-                android:textSize="18sp"
-                />
+                android:drawableStart="@drawable/lock_24"
+                android:gravity="center_vertical"
+                android:text="\tDados para autentificacao"
+                android:textColor="@color/primary_light"
+                android:textSize="18sp" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:boxBackgroundColor="#0000"
 
                 >
+
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/login_email"
-                    />
+                    android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:boxBackgroundColor="#0000"
 
                 >
+
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/login_senha"
-                    />
+                    android:inputType="numberPassword" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <TextView
+                style="@style/TextAppearance.MaterialComponents.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_person_24"
-                android:text="\tDados pessoais"
-                style="@style/TextAppearance.MaterialComponents.Body1"
-                android:textColor="@color/primary_light"
-                android:gravity="center_vertical"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="4dp"
-                android:textSize="18sp"
-                />
+                android:drawableStart="@drawable/ic_person_24"
+                android:gravity="center_vertical"
+                android:text="\tDados pessoais"
+                android:textColor="@color/primary_light"
+                android:textSize="18sp" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:boxBackgroundColor="#0000"
 
                 >
+
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="Nome"
-                    />
+                    android:inputType="textCapWords" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Altura" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:boxBackgroundColor="#0000"
 
                 >
+
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Profissão"
-                    />
+                    android:hint="Profissão" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:boxBackgroundColor="#0000"
 
                 >
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="#0000"
+
+                >
+
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Altura"
-                    />
+                    android:hint="Data de Nascimento" />
             </com.google.android.material.textfield.TextInputLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp"
+                    android:text="Sexo"
+
+                    android:textColor="#f666" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        style="@style/TextAppearance.MaterialComponents.Body2"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sexo"
-                            android:paddingTop="8dp"
-                            android:paddingStart="16dp"
-                            style="@style/TextAppearance.MaterialComponents.Body1"
+                        android:text="Feminino"
+                        android:textColor="#f666" />
 
-                            android:textColor="#f666"/>
-                        <RadioGroup
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Feminino"
-                                style="@style/TextAppearance.MaterialComponents.Body2"
-                                android:textColor="#f666"
-                                />
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Masculino"
-                                style="@style/TextAppearance.MaterialComponents.Body2"
-                                android:textColor="#f666"
-                                />
-                        </RadioGroup>
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="#f666"/>
-                    </LinearLayout>
+                    <RadioButton
+                        style="@style/TextAppearance.MaterialComponents.Body2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Masculino"
+                        android:textColor="#f666" />
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f666" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
