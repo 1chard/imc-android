@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,8 +17,9 @@ class MainActivity : AppCompatActivity() {
         //cria um ouvidor
         botaoCriarConta.setOnClickListener{
             //cria uma intencao e troca de tela
-            val intent = Intent(this, CadastroActivity::class.java)
+            val intent = Intent(this, CadastroUsuarioActivity::class.java)
             startActivity(intent)
         }
+
     }
 }
