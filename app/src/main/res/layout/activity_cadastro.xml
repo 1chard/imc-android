@@ -147,7 +147,6 @@
                     android:layout_height="match_parent"
                     android:inputType="numberDecimal"
                     android:hint="Altura"
-                    android:focusable="false"
                     android:id="@+id/cadastro_usuario_altura"
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -165,6 +164,7 @@
                     android:layout_height="match_parent"
                     android:hint="Data de Nascimento"
                     android:id="@+id/cadastro_usuario_data_nascimento"
+                    android:focusable="false"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 

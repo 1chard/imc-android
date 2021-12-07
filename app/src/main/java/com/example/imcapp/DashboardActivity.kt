@@ -1,5 +1,6 @@
 package com.example.imcapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -7,6 +8,8 @@ import android.widget.TextView
 
 
 class DashboardActivity : AppCompatActivity() {
+    lateinit var  cardPesarAgora: View
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
@@ -14,6 +17,12 @@ class DashboardActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         obterDados()
+
+        cardPesarAgora = findViewById(R.id.card_pesar_agora)
+
+        cardPesarAgora.setOnClickListener {
+            startActivity(Intent(this, PesagemActivity::class.java))
+        }
     }
 
     private fun obterDados(){

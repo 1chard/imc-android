@@ -9,6 +9,7 @@ import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.Toast
+import java.text.DateFormat
 import java.text.DecimalFormat
 import java.text.NumberFormat
 import java.util.*
@@ -57,8 +58,6 @@ class CadastroUsuarioActivity : AppCompatActivity() {
 
             editDataNascimento.setText("${diaFinal}/${mesFinal}/${year}")
         }, ano, mes, dia)
-
-
 
         datepicker.show()
     }

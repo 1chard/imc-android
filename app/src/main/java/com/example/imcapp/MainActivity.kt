@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -37,8 +38,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, CadastroUsuarioActivity::class.java)
             startActivity(intent)
         }
-
-
     }
 
     private fun login() {
